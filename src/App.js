@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react'
 import './App.css';
+import NavBar from './components/NavBar';
+import HomePage from './pages/HomePage';
+
+const initialState = {
+  firstName: "Cody",
+  lastName: "Thaller",
+  profilePic: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/800px-Twemoji_1f600.svg.png"
+}
 
 function App() {
+  const [user, setUser] = useState(initialState)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar user={user} />
+      <HomePage user={ user } setUser={ setUser }/>
     </div>
   );
 }

@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15%;
+}
+
+#user-option {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+main {
+  padding: 5px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.round-profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.stories-list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  color: white;
+}
+
+.story {
+  width: 150px;
+  height: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: gray;
+}
+
+.edit-user {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
